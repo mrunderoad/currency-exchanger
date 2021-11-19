@@ -12,10 +12,12 @@
     </div>
     <h2>Get your currency exchange rates here using the menu below:</h2>
     <P>Note: Input is for USD only.</P>
+    <form id="formOne">
     <label class="usd">
       $$$
     <input class="amount" for="currencyExchange" type="number">
     </label>
+    <br>
     <div class="radio">
       <label>
         <input type="radio" name="currency" value="eur" checked>
@@ -46,6 +48,9 @@
         Japanese Yen
       </label>
     </div>
+    <button class="btn" id="exchangeRate">See your exchange!</button>
+    </form>
+    <h3>Your exchange will leave you with <div class="showResult"></div></h3>
   </div>
 </body>
 

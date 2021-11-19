@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(106, 166, 219);
+  background-color: rgba(106, 166, 219, 0.548);
 }
 
 .jumbotron {
@@ -36,5 +36,22 @@ input {
 }
 
 .usd {
+  margin-left: 580px;
+}
+
+.radio {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+
+h3 {
+  margin-top: 50px;
+}
+
+.btn {
+  background-color: khaki;
+  margin-top: 20px;
   margin-left: 580px;
 }

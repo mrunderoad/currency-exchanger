@@ -5,25 +5,22 @@ import './css/styles.css';
 import CurrencyExchange from './currency.js';
 
 $(document).ready(function () {
-  let promise = CurrencyExchange.getExchange();
-  promise.then(function () {
-    const exchange = userInput;
-  });
-  $('#formOne').submit(function (event) {
-    event.preventDefault(); 
-    const input = $('.amount').val();
-    if (exchange.includes(input)) {
-      exchange.forEach(function (number, index) {
-        if (input === ".eur") {
-          $('.eur').text();
-        }
-      })
-    }
-  });
-  
+  $('#exchangeRate').click(function (event) {
+    event.preventDefault();
+    const number = $('#amount').val;
+    console.log(number);
+    $('#exchangeRate').val("");
 
+    let promise = CurrencyExchange.getExchange();
+    promise.then(function (response) {
+      const body = JSON.parse(response);
+      const currencyExchange = new CurrencyExchange.converter(body, number);
 
-//   // function showError (error) {
-//   //   $('.showErrors').text(`There was an error processing your request: ${error}`);
-//   // }
- });
+      let currencyExchange = [];
+      for (let i = 0; i < body.length; i++) {
+        currencyExchange.push();
+        $('.showEur').text(currencyExchange);
+      }
+    });
+  });
+});

@@ -11,52 +11,51 @@
       <h1>Currency Exchange Rates!</h1>
     </div>
     <h2>Get your currency exchange rates here using the menu below:</h2>
-    <P>Note: Input is for USD only.</P>
     <form id="formOne" type="submit">
-    <label class="usd">
-      $$$
-    <input class="amount" for="currencyExchange" type="number">
-    </label>
-    <br>
-    <div class="radio">
-      <label>
-        <input type="radio" name="currency" value="eur" class="eur" checked>
-        European Euro
+      <label class="usd">
+        $$$
+        <input id="amount" for="currencyExchange" type="number" placeholder="USD">
       </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="currency" value="gbp">
-        Great British Pound
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="currency" value="cad">
-        Canadian Dollar
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="currency" value="aud">
-        Australian Dollar
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="currency" value="jpy">
-        Japanese Yen
-      </label>
-    </div>
-    <button class="btn" id="exchangeRate">See your exchange!</button>
+      <br>
+      <div class="radio">
+        <label>
+          <input type="radio" name="currency" value="eur" class="eur" checked>
+          European Euro
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="currency" value="gbp">
+          Great British Pound
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="currency" value="cad">
+          Canadian Dollar
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="currency" value="aud">
+          Australian Dollar
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="currency" value="jpy">
+          Japanese Yen
+        </label>
+      </div>
+      <button class="btn" id="exchangeRate">See your exchange!</button>
     </form>
     <h3>Your exchange will leave you with</h3>
-    <div id="eur"></div>
-    <div id="gbp"></div>
-    <div id="cad"></div>
-    <div id="aud"></div>
-    <div id="jpy"></div>
-    <div id="showErrors"></div>
+    <div class="showEur"></div>
+    <div class="showGbp"></div>
+    <div class="showCad"></div>
+    <div class="showAud"></div>
+    <div class="showJpy"></div>
+    <div class="showErrors"></div>
   </div>
 </body>
 

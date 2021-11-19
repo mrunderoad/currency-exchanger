@@ -7,20 +7,20 @@ import CurrencyExchange from './currency.js';
 $(document).ready(function () {
   $('#exchangeRate').click(function (event) {
     event.preventDefault();
-    const number = $('#amount').val;
-    console.log(number);
+    const number = $('#amount').val();
+    const eur = $('#eur').val();
+    const gbp = $('#gpb').val();
+    const cad = $('#cad').val();
+    const aud = $('#aud').val();
+    const jpy = $('#jpy').val();
     $('#exchangeRate').val("");
 
     let promise = CurrencyExchange.getExchange();
     promise.then(function (response) {
       const body = JSON.parse(response);
-      const currencyExchange = new CurrencyExchange.converter(body, number);
+      const currencyConverter = new CurrencyExchange(body, number);
 
-      let currencyExchange = [];
-      for (let i = 0; i < body.length; i++) {
-        currencyExchange.push();
-        $('.showEur').text(currencyExchange);
-      }
+      
     });
   });
 });

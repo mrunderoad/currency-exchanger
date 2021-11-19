@@ -11,8 +11,14 @@ import CurrencyExchange from './currency.js';
 function getExchange(response) {
   for(let i=0;i<response.exchange.length; i++) {
     let exchange = response.exchange[i].currency;
+    const input = $('.eur').val();  
   
-  $(".showResult").append("<li>" + exchange + "</li>");
+  if (input === ".eur") {
+    $('#eur').text(exchange);
+    } else if (input === ".gbp") {
+    $('#gbp').text(exchange)
+
+    } 
   }
 }
  
@@ -24,11 +30,15 @@ function getExchange(response) {
 $(document).ready(function () {
   let promise = CurrencyExchange.getExchange();
   promise.then(function () {
-    console.log(getExchange);
   });
   $('#formOne').submit(function (event) {
-    event.preventDefault();
-    const input = $('.amount').val();
-    $('.showResult').text(input);
+    event.preventDefault();  
+    //getExchange 
   });
+  
+
+
+  // function showError (error) {
+  //   $('.showErrors').text(`There was an error processing your request: ${error}`);
+  // }
 });

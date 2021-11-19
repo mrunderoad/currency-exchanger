@@ -12,7 +12,7 @@
     </div>
     <h2>Get your currency exchange rates here using the menu below:</h2>
     <P>Note: Input is for USD only.</P>
-    <form id="formOne">
+    <form id="formOne" type="submit">
     <label class="usd">
       $$$
     <input class="amount" for="currencyExchange" type="number">
@@ -32,7 +32,7 @@
     </div>
     <div class="radio">
       <label>
-        <input type="radio" name="currency" value="Canadian">
+        <input type="radio" name="currency" value="cad">
         Canadian Dollar
       </label>
     </div>
@@ -50,7 +50,13 @@
     </div>
     <button class="btn" id="exchangeRate">See your exchange!</button>
     </form>
-    <h3>Your exchange will leave you with <div class="showResult"></div></h3>
+    <h3>Your exchange will leave you with</h3>
+    <div id="eur"></div>
+    <div id="gbp"></div>
+    <div id="cad"></div>
+    <div id="aud"></div>
+    <div id="jpy"></div>
+    <div id="showErrors"></div>
   </div>
 </body>
 

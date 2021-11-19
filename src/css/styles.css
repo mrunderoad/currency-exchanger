@@ -1,5 +1,8 @@
 body {
-  background-image: url("/src/assets/images/piggy-bank.jpeg");
+  background-image: url("https://ychef.files.bbci.co.uk/960_540/p06y5y5s.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .jumbotron {
@@ -7,7 +10,8 @@ body {
   padding: 30px;
   margin-top: 20px;
   margin-bottom: 40px;
-  margin-right: 760px;
+  margin-right: 390px;
+  margin-left: 360px;
   border: 4px inset black;
   border-radius: 30px;
 }
@@ -44,7 +48,8 @@ input {
   vertical-align: top;
   margin-left: 100px;
   margin-top: 30px;
-  background-color: rgba(255, 0, 0, 0.267);
+  background-color: sienna;
+  color: aliceblue;
 }
 
 h3 {
@@ -55,4 +60,20 @@ h3 {
   background-color: khaki;
   margin-top: 20px;
   margin-left: 570px;
+}
+
+.card {
+  margin-right: 800px;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-image: url("https://www.tellermate.com/us/wp-content/uploads/sites/8/2020/05/Cash-US.jpg"); 
+}
+
+h4 {
+  color: gold;
+  text-shadow: 3px 2px black;
 }

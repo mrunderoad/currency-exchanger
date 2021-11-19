@@ -18,9 +18,10 @@ $(document).ready(function () {
     let promise = CurrencyExchange.getExchange();
     promise.then(function (response) {
       const body = JSON.parse(response);
-      const currencyConverter = new CurrencyExchange(body, number);
 
-      
-    });
+    if ($('input[name="eur"]:checked') === eur) {
+      $(".showEur").text(body, number);
+    }
+  });
   });
 });

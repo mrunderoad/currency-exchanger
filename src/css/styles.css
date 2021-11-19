@@ -18,3 +18,23 @@ h1 {
   text-shadow: 2px 2px darkgoldenrod;
   opacity: 1;
 }
+
+h2, p {
+  text-align: center;
+}
+
+input {
+  align-items: center;
+}
+
+.amount {
+  width: 50%;
+  margin-left: px;
+  color: rgb(42, 150, 9);
+  text-shadow: 1px 1px black;
+  background-color: rgba(238, 212, 95, 0.712);
+}
+
+.usd {
+  margin-left: 580px;
+}

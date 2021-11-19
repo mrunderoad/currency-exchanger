@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(106, 166, 219, 0.548);
+  background-image: url("/src/assets/images/piggy-bank.jpeg");
 }
 
 .jumbotron {
@@ -36,7 +36,7 @@ input {
 }
 
 .usd {
-  margin-left: 570px;
+  margin-left: 520px;
 }
 
 .radio {

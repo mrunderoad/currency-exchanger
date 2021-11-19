@@ -19,9 +19,7 @@ $(document).ready(function () {
     promise.then(function (response) {
       const body = JSON.parse(response);
 
-    if ($('input[name="eur"]:checked') === eur) {
-      $(".showEur").text(body, number);
-    }
+    
   });
   });
 });

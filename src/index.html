@@ -12,44 +12,34 @@
     </div>
     <h2>Get your currency exchange rates here using the menu below:</h2>
     <form id="formOne" type="submit">
-      <label class="usd">
-        $$$
-        <input id="amount" for="currencyExchange" type="number" placeholder="USD">
-      </label>
+      <label class="usd">$$$</label>
+      <input id="amount" for="currencyExchange" type="number" placeholder="USD">
+      
       <br>
       <div class="radio">
-        <label>
-          <input type="radio" name="currency" value="EUR" id="eur" checked>
-          European Euro
-        </label>
+        <label>European Euro</label>
+        <input type="radio" name="currency" value="EUR" id="eur" checked>
       </div>
       <div class="radio">
-        <label>
-          <input type="radio" name="currency" value="GBP" id="gbp">
-          Great British Pound
-        </label>
+        <label>Great British Pound</label>
+        <input type="radio" name="currency" value="GBP" id="gbp">
       </div>
       <div class="radio">
-        <label>
+        <label>Canadian Dollar</label>
           <input type="radio" name="currency" value="CAD" id="cad">
-          Canadian Dollar
-        </label>
       </div>
       <div class="radio">
-        <label>
-          <input type="radio" name="currency" value="AUD" id="aud">
-          Australian Dollar
-        </label>
+        <label>Australian Dollar</label>
+        <input type="radio" name="currency" value="AUD" id="aud">  
       </div>
       <div class="radio">
-        <label>
-          <input type="radio" name="currency" value="JPY" id="jpy">
-          Japanese Yen
-        </label>
+        <label>Japanese Yen</label>
+        <input type="radio" name="currency" value="JPY" id="jpy"> 
       </div>
       <button class="btn" id="exchangeRate" type="submit">See your exchange!</button>
     </form>
-    <div id="result"></div>
+    <h3>Your rate is: <span id="result"></span></h3>
+    <div id="showErrors"></div>
     <div class="row">
     <a href="https://www.investopedia.com/articles/forex/11/why-trade-forex.asp">
     <div class="card">

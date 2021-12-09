@@ -14,14 +14,25 @@ function displayRate(response, currencyChosen) {
   return $('#result').text(pickedCurrency);
 }
 
+// function displayErrors(){
+
+// }
+
 $(document).ready(function() {
   $('#formOne').submit(function(event) {
     event.preventDefault();
-    let currency = $('formOne').val();
-    ExchangeCurrency.getExchangeRate(currencyChosen);
-
-    displayRate(currency);
+    let amount = $('#amount').val();
+    let selectedCurrency = $('input[name="currency"]:checked').val();
+    let promise = ExchangeCurrency.getExchange();
+    promise.then(function(response){
+      let body = JSON.parse(response)
+      let conversionRate = body.conversion_rates[selectedCurrency]
+      console.log(amount, selectedCurrency, conversionRate);
+      $('#result').text(`${amount} USD = ${conversionRate * amount} ${selectedCurrency}`);
+      $('#showErrors').text();
+    })
+    
     clearField();
     });
-    $('#result').text();
+   
 });

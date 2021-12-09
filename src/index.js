@@ -4,23 +4,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeCurrency from './js/currency.js';
 
-function display(response) {
-  // let inputCash = result.
+function clearField() {
+  $('#amount').val("");
+}
+
+function displayRate(response, currencyChosen) {
   let pickedCurrency = response.currency;
-  $('#result').text(pickedCurrency)
+  if (response.currency === currencyChosen)
+  return $('#result').text(pickedCurrency);
 }
 
 $(document).ready(function() {
   $('#formOne').submit(function(event) {
     event.preventDefault();
-    let currency = $('formOne').val()
-    ExchangeCurrency.getExchangeRate(currency)
-    .then(function(display){
-      
+    let currency = $('formOne').val();
+    ExchangeCurrency.getExchangeRate(currencyChosen);
 
-    display(currency)
-
+    displayRate(currency);
+    clearField();
     });
     $('#result').text();
-  });
 });
